@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alke Wallet - Últimos movimientos</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="menu.html">Alke Wallet</a>
+      <!-- Si ya tienes un navbar armado, usa ese mismo -->
+    </div>
+  </nav>
+
+        <div class="container mt-4">
+        <h2>Últimos movimientos</h2>
+        <p>Aquí puedes ver el historial de depósitos y envíos realizados.</p>
+
+    <!-- 👇 Aquí app.js va a inyectar la tabla -->
+        <div id="listaMovimientos"></div>
+        </div>
+
+  <!-- jQuery (si la estás usando) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Tu lógica JS -->
+  <script src="app.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
