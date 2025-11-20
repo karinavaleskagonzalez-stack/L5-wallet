@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alke Wallet</title>
 
-    <!-- Bootstrap CSS -->
+<head>
+    <!-- =============================================== -->
+    <!-- META Y CONFIGURACIONES BÁSICAS DEL DOCUMENTO    -->
+    <!-- =============================================== -->
+
+    <!-- Indica que el documento usa codificación UTF-8 -->
+    <!-- Esto permite mostrar acentos y caracteres especiales -->
+    <meta charset="UTF-8">
+
+    <!-- Indica al navegador que se adapte al tamaño del dispositivo -->
+    <!-- Esto es obligatorio para cumplir con el módulo de diseño responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pantalla de Bienvenida - Alke Wallet</title>
+
+    <!-- Bootstrap 5 (solicitado en el curso para usar componentes responsivos) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Tu CSS -->
-    <link rel="stylesheet" href="assets/css/estilo.css">
+    <!-- Google Fonts: mejorar la estética de la página -->
+    <!-- Esto forma parte de la mejora visual que pide el proyecto -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Archivo CSS personal (donde aplicamos estilos adicionales más allá de Bootstrap) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-light">
 
-    <div class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
 
-        <!-- Imagen de billetera -->
-        <img src="billetera.png" 
-             alt="Billetera Alke Wallet" 
-             class="mb-4"
-             style="width: 220px;">
+    <!-- ========================================================= -->
+    <!-- CONTENEDOR PRINCIPAL DE LA PANTALLA DE BIENVENIDA         -->
+    <!-- ========================================================= -->
+    <!-- 
+        Este cuadro central representa la "Pantalla de Bienvenida", 
+        parte obligatoria en el proyecto L5-Wallet.
+        Su función es presentar la aplicación y redirigir al usuario al login.
+    -->
+    <div class="welcome-box">
 
-        <!-- Título -->
-        <h1 class="text-center mb-3" style="font-weight: bold;">
-            BIENVENIDO A ALKE WALLET
-        </h1>
+        <!-- Imagen de la billetera (recurso visual de apoyo al branding del proyecto) -->
+        <!-- Esta imagen ayuda a reforzar la identidad visual de la wallet digital -->
+        <img src="billetera.png" alt="Billetera Alke Wallet">
 
-        <!-- Subtítulo -->
-        <p class="text-muted mb-4 text-center">
-            Tu billetera digital segura, rápida y fácil de usar.
-        </p>
+        <!-- Título principal de la página -->
+        <!-- Se usa tipografía limpia (Poppins) para mejorar legibilidad -->
+        <h1>Bienvenido a Alke Wallet</h1>
+
+        <!-- Subtítulo explicativo -->
+        <!-- Esto cumple con la instrucción del curso de hacer la app más intuitiva -->
+        <p>La forma más segura y rápida de gestionar tu dinero digital.</p>
 
         <!-- Botón que lleva al login -->
-        <a href="login.html" class="btn btn-primary btn-lg w-50">
-            Ir al Inicio de Sesión
+        <!-- Este enlace es parte fundamental del flujo del proyecto: 
+             Pantalla de Bienvenida → Login → Menú Principal. -->
+        <a href="login.html" class="btn btn-welcome w-100 mt-3">
+            Ir al inicio de sesión
         </a>
 
     </div>
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <!-- Librerías de JavaScript necesarias para Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
