@@ -3,7 +3,7 @@
 // ===========================================================
 //
 // Cuando el HTML termina de cargarse (DOMContentLoaded),
-// llamamos a todas las funciones "prepararXYZ".
+// llamo a todas las funciones "prepararXYZ".
 // Cada función primero revisa si los elementos existen en
 // esa página, así que no rompe nada aunque no estemos ahí.
 //
@@ -49,7 +49,7 @@ function obtenerMovimientos() {
 function registrarMovimiento(tipo, monto, detalle = "") {
   const movimientos = obtenerMovimientos();
 
-  // Agregamos el nuevo movimiento al inicio del arreglo (unshift)
+  // Agrega el nuevo movimiento al inicio del arreglo (unshift)
   movimientos.unshift({
     tipo,                    // "Depósito" o "Envío"
     monto,                   // número (ej: 500)
@@ -86,7 +86,6 @@ function mostrarSaldoEnMenu() {
 }
 
 
-
 // ===========================================================
 //  🔹 3. LOGIN (login.html)
 //     - Formulario con id="formLogin"
@@ -95,18 +94,18 @@ function mostrarSaldoEnMenu() {
 // ===========================================================
 
 function prepararLogin() {
-  // Buscamos el formulario y los inputs por su id
+  // Busca el formulario y los inputs por su id
   const form = document.getElementById("formLogin");
   const rut = document.getElementById("rut");
   const password = document.getElementById("password");
 
-  // Si no existe el formulario (porque no estamos en login.html),
-  // salimos y no hacemos nada.
+  // Si no existe el formulario (porque no esta en login.html),
+  // salir y no hace nada.
   if (!form) return;
 
-  // Nos "enganchamos" al evento submit del formulario
+  // Se "engancha" al evento submit del formulario
   form.addEventListener("submit", (event) => {
-    // Evitamos que el form recargue la página
+    // Evita que el form recargue la página
     event.preventDefault();
 
     // Validación básica: que RUT y contraseña no estén vacíos
@@ -116,13 +115,13 @@ function prepararLogin() {
     }
 
     // Validación del formato del RUT usando el pattern del input.
-    // checkValidity() usa lo que definiste en el HTML (pattern, required, etc.).
+    // checkValidity() usa lo que defini en el HTML (pattern, required, etc.).
     if (!rut.checkValidity()) {
       alert("El RUT no tiene un formato válido. Ej: 12345678-9");
       return;
     }
 
-    // Si todo está OK → redirigimos al menú principal
+    // Si todo está OK → redirigir al menú principal
     window.location.href = "menu.html";
   });
 }
@@ -186,7 +185,7 @@ function prepararFormularioDeposito() {
   const inputMonto = document.getElementById("montoDeposito");
   const mensaje    = document.getElementById("msgDeposito");
 
-  // Si no estamos en deposit.html, no hay formulario → salimos
+  // Si no estay en deposit.html, no hay formulario → salir
   if (!form || !inputMonto) return;
 
   form.addEventListener("submit", (event) => {
@@ -208,13 +207,13 @@ function prepararFormularioDeposito() {
     const saldoActual = obtenerSaldo();
     const nuevoSaldo  = saldoActual + monto;
 
-    // Guardamos el nuevo saldo
+    // Guardar el nuevo saldo
     guardarSaldo(nuevoSaldo);
 
-    // ✅ Registramos el movimiento en el historial
+    // Registra el movimiento en el historial
     registrarMovimiento("Depósito", monto, "Depósito en cuenta");
 
-    // Mostramos mensaje de éxito
+    // Mostrar mensaje de éxito
     if (mensaje) {
       mensaje.classList.remove("text-danger");
       mensaje.classList.add("text-success");
@@ -222,12 +221,10 @@ function prepararFormularioDeposito() {
         `Depósito exitoso. Nuevo saldo: $ ${nuevoSaldo.toFixed(2)}`;
     }
 
-    // Limpiamos el input
+    // Limpiar el input
     inputMonto.value = "";
   });
 }
-
-
 
 
 // ===========================================================
@@ -320,7 +317,7 @@ function mostrarMovimientos() {
 
   const movimientos = obtenerMovimientos();
 
-  // Si no hay movimientos, mostramos un mensaje amigable
+  // Si no hay movimientos, mostrar un mensaje amigable
   if (movimientos.length === 0) {
     contenedor.innerHTML = `
       <p class="text-muted">
@@ -331,7 +328,7 @@ function mostrarMovimientos() {
     return;
   }
 
-  // Generamos las filas de la tabla a partir del historial
+  // Generar las filas de la tabla a partir del historial
   const filasHTML = movimientos.map((mov) => `
     <tr>
       <td>${mov.fecha}</td>
@@ -341,7 +338,7 @@ function mostrarMovimientos() {
     </tr>
   `).join("");
 
-  // Armamos la tabla completa con Bootstrap
+  // Armar la tabla completa con Bootstrap
   contenedor.innerHTML = `
     <div class="table-responsive mt-3">
       <table class="table table-striped table-hover align-middle">
