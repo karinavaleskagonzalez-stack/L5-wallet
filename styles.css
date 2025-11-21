@@ -1,5 +1,189 @@
+/* ============================================= */
+/* 1) FONDO A PANTALLA COMPLETA                 */
+/* ============================================= */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    background-image: url("billetera.png"); /* tu imagen de fondo */
+    background-size: cover;         /* que cubra toda la pantalla */
+    background-position: center;    /* centrada */
+    background-repeat: no-repeat;
+}
+
+/* Contenedor general que ocupa toda la pantalla */
+/* Caja hacia la DERECHA de la pantalla */
+.welcome-container {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end; /* Ahora la caja se va a tu derecha verdadera */
+    align-items: center;
+
+    padding-right: 50px; /* separada del borde derecho */
+}
+
+
+/* ============================================= */
+/* 2) CAJA DE CRISTAL (Hacia la izquierda)       */
+/* ============================================= */
+.welcome-box {
+    width: 380px;                 /* ancho fijo para no tapar la imagen */
+    padding: 40px;
+
+    background: rgba(0, 0, 0, 0.45);  /* cristal oscuro */
+    backdrop-filter: blur(12px);      /* efecto vidrio */
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.18);
+
+    color: #fff;
+    text-align: left;               /* texto alineado a la izquierda */
+    animation: fadeIn 1s ease-out;
+}
+
+/* ============================================= */
+/* 3) TIPOGRAFÍA                                 */
+/* ============================================= */
+.welcome-box h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.welcome-box p {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+/* ============================================= */
+/* 4) BOTÓN LOGIN                                */
+/* ============================================= */
+.btn-login {
+    display: inline-block;
+    margin-top: 25px;
+    background: #187bff;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #0f5edc;
+}
+
+/* ============================================= */
+/* 5) ANIMACIÓN SUAVE                            */
+/* ============================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================= */
+/* 6) RESPONSIVE                                 */
+/* ============================================= */
+@media (max-width: 800px) {
+    body {
+        background-position: left; /* mantiene billetera visible */
+    }
+
+    .welcome-container {
+        padding-left: 20px;
+    }
+
+    .welcome-box {
+        width: 90%;
+        max-width: 350px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .welcome-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .welcome-box h1 {
+        font-size: 22px;
+    }
+}
+
+/* ===========================================================
+   BOTÓN IR AL INICIO DE SESIÓN — EFECTO DE BRILLO AL HOVER
+   =========================================================== */
+
+.btn-login {
+    background-color: #0d6efd; /* azul Bootstrap */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.btn-login:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #4da3ff, 0 0 15px #73b9ff;
+    box-shadow: 0 0 12px #4da3ff;
+    transform: scale(1.03);
+}
+/* ============================================================
+   FONDO AZUL ELEGANTE CON TONOS DORADOS
+   Inspirado en tu imagen (azul profundo + líneas doradas)
+   Se aplica a TODAS las páginas excepto index.html
+=============================================================== */
+
+body:not(.welcome-page) {
+    background: linear-gradient(135deg, #021226, #032859, #001b3b);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* Pequeñas líneas doradas sutiles */
+body:not(.welcome-page) {
+    background: url("FONDO-AZUL.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* TITULOS BLANCOS BRILLANTES */
+h1, h2, h3 {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+/* SUBTÍTULOS CON TONO DORADO */
+.subtitle-gold {
+    color: #f7d778;
+    font-weight: 500;
+    text-shadow: 0 0 6px rgba(247,215,120,0.3);
+}
+
+small {
+  color:#fff
+}
+
+/* ====================================================
+              Alke Wallet nadvar login
+ ======================================================*/
+.marca-azul {
+    color: #084688 !important;   /* Azul fuerte */
+    font-size: 28px !important;  /* Más grande */
+    font-weight: 700;           /* Negrita elegante */
+    letter-spacing: 1px;        /* Espaciado moderno */
+    text-shadow: 0px 0px 8px rgba(206, 255, 30, 0.103); /* Glow suave */
 }

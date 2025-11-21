@@ -8,40 +8,40 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Tu CSS -->
-    <link rel="stylesheet" href="assets/css/estilo.css">
+    <!-- Hoja de estilos moderna -->
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
-<body class="bg-light">
+<!-- QUITAMOS bg-light PARA QUE FUNCIONE EL FONDO OSCURO -->
+<body class="welcome-page">
 
-    <div class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
 
-        <!-- Imagen de billetera -->
-        <img src="billetera.png" 
-             alt="Billetera Alke Wallet" 
-             class="mb-4"
-             style="width: 220px;">
+    <!-- CONTENEDOR PRINCIPAL -->
 
-        <!-- Título -->
-        <h1 class="text-center mb-3" style="font-weight: bold;">
-            BIENVENIDO A ALKE WALLET
-        </h1>
 
-        <!-- Subtítulo -->
-        <p class="text-muted mb-4 text-center">
-            Tu billetera digital segura, rápida y fácil de usar.
-        </p>
+    <div class="welcome-container">
 
-        <!-- Botón que lleva al login -->
-        <a href="login.html" class="btn btn-primary btn-lg w-50">
-            Ir al Inicio de Sesión
-        </a>
+        <div class="welcome-box">
+
+            <h1>BIENVENIDO A ALKE WALLET</h1>
+
+            <p class="subtitle-gold">Tu billetera digital segura.</p>
+
+                <a href="login.html" class="btn-login">
+                    Ir al Inicio de Sesión
+                </a>
+
+
+        </div>
 
     </div>
 
+</body>
+
+
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
