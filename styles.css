@@ -10,7 +10,7 @@ body {
     background-image: url("billetera.png"); /* imagen de fondo */
     background-size: cover;         /* que cubra toda la pantalla */
     background-position: center;    /* centrada */
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;   /* No repitas la imagen de fondo. Muéstrala solo una vez.*/
 }
 
 /* Contenedor general que ocupa toda la pantalla */
@@ -20,7 +20,7 @@ body {
     width: 100%;
 
     display: flex;
-    justify-content: flex-end; /* Ahora la caja se va a tu derecha verdadera */
+    justify-content: flex-end; /* Ahora la caja se va a la derecha pantalla*/
     align-items: center;
 
     padding-right: 50px; /* separada del borde derecho */
