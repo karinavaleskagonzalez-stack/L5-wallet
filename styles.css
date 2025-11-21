@@ -7,7 +7,7 @@ body {
     height: 100vh;
     overflow: hidden;
 
-    background-image: url("billetera.png"); /* tu imagen de fondo */
+    background-image: url("billetera.png"); /* imagen de fondo */
     background-size: cover;         /* que cubra toda la pantalla */
     background-position: center;    /* centrada */
     background-repeat: no-repeat;
