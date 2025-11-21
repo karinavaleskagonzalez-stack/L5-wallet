@@ -116,7 +116,7 @@ body {
 }
 
 /* ===========================================================
-   BOTÓN IR AL INICIO DE SESIÓN — EFECTO DE BRILLO AL HOVER
+   7) BOTÓN IR AL INICIO DE SESIÓN — EFECTO DE BRILLO AL HOVER
    =========================================================== */
 
 .btn-login {
@@ -141,8 +141,7 @@ body {
     transform: scale(1.03);
 }
 /* ============================================================
-   FONDO AZUL ELEGANTE CON TONOS DORADOS
-   Inspirado en tu imagen (azul profundo + líneas doradas)
+   8) FONDO AZUL ELEGANTE CON TONOS DORADOS
    Se aplica a TODAS las páginas excepto index.html
 =============================================================== */
 
@@ -178,7 +177,8 @@ small {
 }
 
 /* ====================================================
-              Alke Wallet nadvar login
+   9)      Alke Wallet nadvar login
+  Desarrollo siguiendo la consigna y aplicando diseño
  ======================================================*/
 .marca-azul {
     color: #084688 !important;   /* Azul fuerte */
